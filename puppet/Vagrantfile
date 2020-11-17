@@ -2,11 +2,7 @@
 # vi: set ft=ruby :
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.synced_folder ".", "/vagrant", disabled: true
-
-  config.vbguest.auto_update = true
   config.vm.box = "centos/7"
-#  config.vm.box = "visibilityspots/centos-7.x-minimal"
   config.vm.hostname = "puppet"
 
   config.vm.provision "shell", path: "scripts/install-puppet.sh"
