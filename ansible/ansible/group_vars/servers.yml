@@ -1,1 +1,2 @@
 crond__content: 'servers_value'
+consul__server: true

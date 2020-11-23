@@ -5,6 +5,9 @@
     state: installed
   notify: restart crond
 
+- debug:
+    msg: The variable resolved to {{ crond__content }}
+
 - name: add hello script
   template:
     src: hello.sh.j2
@@ -20,4 +23,4 @@
     user: root
     special_time: hourly
     job: "/usr/local/bin/hello.sh"
-    state: present
+    state: absent
