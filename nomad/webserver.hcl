@@ -3,7 +3,7 @@ job "webserver" {
   type = "service"
 
   group "webserver" {
-    count = 3
+    count = 2
 
     network {
       port "webserver_web" {
